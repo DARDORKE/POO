@@ -1,18 +1,7 @@
 <?php
 
-require_once 'User.php';
-require_once 'Seller.php';
+require_once 'ElectricCar.php';
+require_once  'GasolineCar.php';
 
-function displayUsername(User $user): void
-{
-    echo 'Connecté en tant que : '.$user->getDisplayName();
-}
-
-function displaySellerUsername(Seller $seller): void
-{
-    echo 'Connecté en tant que : '.$seller->getDisplayName();
-}
-
-$user = new User('John', 'john@goe.fr');
-$seller = new Seller('Laure', 'laure@dupont.com', 'Sarl Laure');
-echo $seller->getDisplayName();
+$tesla = new ElectricCar(50000, 'Tesla', 560);
+$renault = new GasolineCar(20000, 'Renault', 100);
