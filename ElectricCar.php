@@ -2,6 +2,7 @@
 
 require_once 'Car.php';
 
+
 class ElectricCar extends Car
 {
     public float $batteryAutonomy;
@@ -18,5 +19,10 @@ class ElectricCar extends Car
         $characteristics['batteryAutonomy'] = $this->batteryAutonomy;
 
         return $characteristics;
+    }
+
+    public function getFinalPrice(): float
+    {
+        return $this->price - 2500;
     }
 }

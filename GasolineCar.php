@@ -19,4 +19,14 @@ class GasolineCar extends Car
 
         return $characteristics;
     }
+
+    public function getFinalPrice(): float
+    {
+        $excessiveEmissions = $this->co2Emission - 119;
+        if ($excessiveEmissions <= 0) {
+            return $this->price;
+        }
+
+        return $this->price + 50 * $excessiveEmissions;
+    }
 }

@@ -1,8 +1,8 @@
 <?php
 
-include_once 'CharacteristicsDisplayable.php';
+require_once 'CharacteristicsDisplayable.php';
 
-class Car implements CharacteristicsDisplayable
+abstract class Car implements CharacteristicsDisplayable
 {
     public float $price;
     public string $brand;
@@ -20,4 +20,6 @@ class Car implements CharacteristicsDisplayable
             'brand' => $this->brand,
         ];
     }
+
+    public abstract function getFinalPrice(): float;
 }
