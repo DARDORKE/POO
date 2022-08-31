@@ -1,6 +1,8 @@
 <?php
 
-class Car
+include_once 'CharacteristicsDisplayable.php';
+
+class Car implements CharacteristicsDisplayable
 {
     public float $price;
     public string $brand;
@@ -19,5 +21,3 @@ class Car
         ];
     }
 }
-
-

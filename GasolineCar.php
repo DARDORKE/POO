@@ -14,12 +14,9 @@ class GasolineCar extends Car
 
     public function getCharacteristics(): array
     {
-        // Ici, on fait appel à la fonction qui se situe dans l'objet parent (Car)
         $characteristics = parent::getCharacteristics();
-        // Lors de l'appel de la fonction, on ajoute un champ à notre tableau qui est,
-        // comme son nom l'indique : co2Emission. Et qui va venir utiliser le troisième paramètre passé
-        // à la fonction __construct et l'ajouter dans le champs "co2Emission" que l'on crée grâce à :
         $characteristics['co2Emission'] = $this->co2Emission;
+
         return $characteristics;
     }
 }
